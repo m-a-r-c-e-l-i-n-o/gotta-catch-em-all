@@ -1,6 +1,5 @@
 const Class = {
     gottaCatchEmAll() {
-        console.log('CATHINGGGGGGGGGGGGGGGGGGG!')
         this.unhandledRejections = new Map()
         this.uncaughtExceptions = []
         this.onUnhandledRejectionsHandler = null
@@ -29,7 +28,6 @@ const Class = {
         }
     },
     gottaRemoveThemAll() {
-        console.log('REMOVINGGGGGGGGGGGGGGGGGGG!')
         process.removeListener('unhandledRejection', this.onUnhandledRejectionsHandler)
         process.removeListener('rejectionHandled', this.onRejectionHandledHandler)
         process.removeListener('uncaughtException', this.onUncaughtExceptionsHandler)

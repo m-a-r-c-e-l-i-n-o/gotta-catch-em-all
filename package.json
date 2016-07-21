@@ -1,6 +1,6 @@
 {
   "name": "gotta-catch-em-all",
-  "version": "0.0.0",
+  "version": "0.0.2",
   "description": "For when your pokemon is being a total d*ck and you have no idea why.",
   "main": "dist/gotta-catch-em-all.js",
   "scripts": {
