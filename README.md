@@ -14,6 +14,6 @@ gottaCatchEmAll() // start logging unhandled and uncaught errors
 
 // some crazy sync and async stuff
 
-gottaReleaseEmAlll() // stops logging and prints the errors with stack output
+gottaReleaseEmAll() // stops logging and prints the errors with stack output
 ```
-<sub>*Note: Usage example is not very representative, remember to only call "gottaReleaseEmAlll" after the async stuff is done.*</sub>
+<sub>*Note: Usage example is not very representative, remember to only call "gottaReleaseEmAll" after the async stuff is done.*</sub>
