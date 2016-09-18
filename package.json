@@ -1,10 +1,10 @@
 {
   "name": "gotta-catch-em-all",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "For when your pokemon is being a total d*ck and you have no idea why.",
   "main": "dist/gotta-catch-em-all.js",
   "scripts": {
-    "test": "test",
+    "test": "npm run build && nutra --config ./nutra.config.js",
     "build": "babel src --out-dir dist",
     "prepublish": "npm run build"
   },
@@ -28,7 +28,10 @@
   "homepage": "https://github.com/m-a-r-c-e-l-i-n-o/gotta-catch-em-all#readme",
   "devDependencies": {
     "babel-cli": "^6.9.0",
-    "babel-preset-es2016-node5": "^1.1.2"
+    "babel-preset-es2016-node5": "^1.1.2",
+    "nutra": "0.0.13",
+    "nutra-jasmine-coverage-babel-preset": "0.0.6",
+    "nutra-mock": "0.0.7"
   },
   "dependencies": {}
 }

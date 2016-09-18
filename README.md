@@ -1,5 +1,5 @@
 # Gotta Catch Em All!
-For when your pokemon is being a total d*ck and you have no idea why. In other words, it catches uncaught exceptions and unhandled rejections (usually caused by using ES6 Promises) in Node.
+For when your pokemon is being unruly and you have no idea why. In other words, it catches unhandled rejections (usually caused by using ES6 Promises) in Node v6+.
 
 ## Installation
 ```bash
@@ -10,10 +10,15 @@ npm install --save-dev gotta-catch-em-all
 ```js
 import { gottaCatchEmAll, gottaReleaseEmAll } from 'gotta-catch-em-all'
 
-gottaCatchEmAll() // start logging unhandled and uncaught errors
+gottaCatchEmAll() // Start logging unhandled rejections
 
-// some crazy sync and async stuff
+Promise.reject(new Error('I shall not get uncaught!')) // Throw a fugitive error
 
-gottaReleaseEmAll() // stops logging and prints the errors with stack output
+setTimeout(() => { gottaReleaseEmAll() }, 0) // Logs all unhandled rejections to the console
+// Example:
+// Unhandled Rejection: Error: I shall not get uncaught!
+// ...
+// stack trace output
+// ....
 ```
-<sub>*Note: Usage example is not very representative, remember to only call "gottaReleaseEmAll" after the async stuff is done.*</sub>
+<sub>*Note: Remember to only call "gottaReleaseEmAll" after the async calls are done. Calling "gottaReleaseEmAll" is entirely optional, if left uncalled, unhandled rejections will be logged to the console when node exits.*</sub>
